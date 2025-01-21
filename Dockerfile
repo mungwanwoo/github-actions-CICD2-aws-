@@ -7,7 +7,7 @@ WORKDIR /app
 # 종속성 파일 복사 및 설치
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-RUN python manage.py migrate
+
 RUN python manage.py collectstatic
 
 # 애플리케이션 코드 복사
